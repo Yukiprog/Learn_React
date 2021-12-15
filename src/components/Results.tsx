@@ -1,8 +1,30 @@
 //Results.tsx
 
-const Results =()=>{
+type ResultsPropsType = {
+    results: {
+        city: String;
+        conditionText: String;
+        icon: string;
+    }
+}
+
+const Results = (props: ResultsPropsType) => {
     return (
-        <h1>気象データ</h1>
+        <div>
+            {
+                props.results.city &&
+                <div>{props.results.city}
+                </div>
+            }
+            {props.results.conditionText &&
+                <div>{props.results.conditionText}
+                </div>}
+            {props.results.conditionText &&
+                <div>
+                    <img src={props.results.icon} alt="icon" />
+                    <span>{props.results.conditionText}</span>
+                </div>}
+        </div>
     );
 };
 

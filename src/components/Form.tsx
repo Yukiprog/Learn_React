@@ -1,7 +1,7 @@
 //Form.tsx
 
 type FormPropsType = {
-    setCity: React.Dispatch<React.SetStateAction<String>>
+    setCity: React.Dispatch<React.SetStateAction<string>>
     getWeather: (e: any) => void
 }
 const Form = (props: FormPropsType) => {
