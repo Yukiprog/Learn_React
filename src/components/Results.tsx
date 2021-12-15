@@ -2,8 +2,8 @@
 
 type ResultsPropsType = {
     results: {
-        city: String;
-        conditionText: String;
+        city: string;
+        conditionText: string;
         icon: string;
     }
 }
@@ -13,14 +13,14 @@ const Results = (props: ResultsPropsType) => {
         <div>
             {
                 props.results.city &&
-                <div>{props.results.city}
+                <div className="results-city">{props.results.city}
                 </div>
             }
             {props.results.conditionText &&
                 <div>{props.results.conditionText}
                 </div>}
             {props.results.conditionText &&
-                <div>
+                <div className="results-condition">
                     <img src={props.results.icon} alt="icon" />
                     <span>{props.results.conditionText}</span>
                 </div>}
